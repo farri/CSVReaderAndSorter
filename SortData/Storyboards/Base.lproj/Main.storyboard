@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SortData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AEW-1d-UUL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="772"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="g1v-JY-sXH"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Per-Nt-gQ2"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ejp-9D-Peo">
+                                <rect key="frame" x="63" y="787" width="286" height="29"/>
+                                <segments>
+                                    <segment title="Younger Player"/>
+                                    <segment title="Elder Player"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SegmentValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="DKs-a8-5Fw"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRF-bQ-edS">
+                                <rect key="frame" x="158" y="832" width="98" height="30"/>
+                                <state key="normal" title="Sort By"/>
+                                <connections>
+                                    <action selector="SortBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J7A-YT-K0d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ejp-9D-Peo" firstAttribute="top" secondItem="AEW-1d-UUL" secondAttribute="bottom" constant="15" id="CtX-an-PZg"/>
+                            <constraint firstItem="IRF-bQ-edS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="158" id="Fep-3d-HuZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ejp-9D-Peo" secondAttribute="trailing" constant="65" id="HMP-Zo-2jN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IRF-bQ-edS" secondAttribute="trailing" constant="158" id="Kzy-Vh-NlC"/>
+                            <constraint firstItem="IRF-bQ-edS" firstAttribute="top" secondItem="Ejp-9D-Peo" secondAttribute="bottom" constant="17" id="PeH-49-Srk"/>
+                            <constraint firstItem="IRF-bQ-edS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="SCW-a3-XK3"/>
+                            <constraint firstItem="AEW-1d-UUL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WgC-Pq-67k"/>
+                            <constraint firstItem="Ejp-9D-Peo" firstAttribute="top" secondItem="AEW-1d-UUL" secondAttribute="bottom" constant="15" id="XX0-Gq-IhF"/>
+                            <constraint firstItem="IRF-bQ-edS" firstAttribute="top" secondItem="Ejp-9D-Peo" secondAttribute="bottom" constant="17" id="kiB-2F-eP3"/>
+                            <constraint firstItem="AEW-1d-UUL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pbJ-o2-qvs"/>
+                            <constraint firstItem="AEW-1d-UUL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u7e-Z2-uSE"/>
+                            <constraint firstItem="Ejp-9D-Peo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="v2u-xN-QUx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="DateSortSegment" destination="Ejp-9D-Peo" id="TD3-cs-tAM"/>
+                        <outlet property="tableView" destination="AEW-1d-UUL" id="AYU-Lg-m77"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-343.47826086956525" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+</document>
