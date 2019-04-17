@@ -54,7 +54,7 @@ class CustomPlayerCell: UITableViewCell {
         self.yearsInLeague.text = ""
         self.DOB.text = ""
     }
-    
+    //For UI customization
     override func awakeFromNib() {
         super.awakeFromNib()
         

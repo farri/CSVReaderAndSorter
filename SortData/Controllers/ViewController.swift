@@ -70,7 +70,6 @@ class ViewController: UIViewController {
     func showActionSheetToSelectSortOption() {
         
         
-        
         //create alert buttons for sorting options
         let alert = UIAlertController(title: "Sorting", message: "Please Select an Option", preferredStyle: .actionSheet)
         

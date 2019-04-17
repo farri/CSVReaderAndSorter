@@ -23,7 +23,7 @@ extension Array where Element == Player {
         switch sortOn {
         case "NameA":
             sortedArray = self.sorted { (id1, id2) -> Bool in
-                return id1.fullName! < id2.fullName! // Use > for Descending order
+                return id1.fullName! < id2.fullName! // Use < for Descending order
             }
         case "NameD":
             sortedArray = self.sorted { (id1, id2) -> Bool in
